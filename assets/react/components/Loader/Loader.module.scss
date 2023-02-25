@@ -1,0 +1,18 @@
+.loader {
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    i {
+        display: inline-block;
+    }
+}
+
+.absolute {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+}

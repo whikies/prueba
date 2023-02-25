@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ 'title_operation'|trans }}{% endblock %}
+
+{% block body %}
+<div id="react-root"></div>
+{% endblock %}
+
+
+{% block stylesheets %}
+    {{ parent() }}
+    {{ encore_entry_link_tags('operation') }}
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    {{ encore_entry_script_tags('operation') }}
+{% endblock %}
