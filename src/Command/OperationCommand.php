@@ -50,8 +50,10 @@ class OperationCommand extends Command
             $io->success(sprintf('El resultado de la operación "%s" es: %s', $input->getArgument('operation'), $result));
         } catch (InvalidArgumentException $e) {
             $io->error(sprintf("Ha ocurrido un error con los parámetros obtenidos.\nError: %s", $e->getMessage()));
+            return Command::INVALID;
         } catch (Exception $e) {
             $io->error(sprintf("Ha ocurrido un error.\nError: %s", $e->getMessage()));
+            return Command::FAILURE;
         }
 
         return Command::SUCCESS;
