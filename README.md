@@ -2,7 +2,7 @@
 
 ## Tareas realizadas
 - Creación de servicio para operaciones
-- Creación de controlador para realizar operaciones aritméticas con dos endpoint 
+- Creación de controlador para realizar operaciones aritméticas con cuatro endpoint
 - Creación de comando para realizar operaciones aritméticas
 - Test unitarios del servicio
 - Frontend realizado con React
@@ -47,10 +47,12 @@ Para ejecutar las pruebas:
 - php bin/phpunit
 
 ## Información adicional
-El controlador tiene dos métodos, uno para mostrar el formulario y otro para hacer las operaciones.
+El controlador tiene cuatro métodos, uno para mostrar el formulario react, otro para mostrar el formulario de symfony, otro para mostrar el formulario de symfony ejecutado con javascript y otro para hacer las operaciones.
 
 El servicio realiza las operaciones aritméticas disponibles con sus correspondientes validaciones
 
 El formulario es un formulario con React incrustado dentro del mismo symfony
+
+El formuario de symfony es un formulario de php (FormType) renderizado con las plantillas twig
 
 Se ha utilizado typescript y scss con el webpack de symfony
