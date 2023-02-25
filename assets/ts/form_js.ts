@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
         loader?.style.setProperty('display', 'flex');
 
         try {
-            const response = await apiApp.get<{result: number;}>(`${window.APP_REACT_VARS.urlBase}${(select as HTMLSelectElement)?.value}/${(operatorA as HTMLInputElement)?.value}/${(operatorB as HTMLInputElement)?.value}`);
+            const response = await apiApp.get<{result: number;}>(`/${(select as HTMLSelectElement)?.value}/${(operatorA as HTMLInputElement)?.value}/${(operatorB as HTMLInputElement)?.value}`);
             resultWrap?.style.setProperty('display', 'block');
             let span = resultWrap?.querySelector('span:last-child');
 

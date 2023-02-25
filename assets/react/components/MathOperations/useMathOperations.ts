@@ -29,7 +29,7 @@ const useMathOperations = () => {
     const handleForm = async (data: FormFields) => {
         try {
             setLoader(true);
-            const response = await apiApp.get<ResponseOperation>(`${window.APP_REACT_VARS.urlBase}${data.operation}/${data.operatorA}/${data.operatorB}`);
+            const response = await apiApp.get<ResponseOperation>(`/${data.operation}/${data.operatorA}/${data.operatorB}`);
             mountedRef.current && setData(response.data.result);
             mountedRef.current && resetForm();
         } catch (err: any) {
