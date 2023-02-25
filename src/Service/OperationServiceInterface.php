@@ -8,13 +8,13 @@ interface OperationServiceInterface
 {
     /**
      * Realiza una operación según el parámetro $operation
-     * @param Operation $operation
+     * @param Operation|string $operation
      * @param int|float $operatorA
      * @param int|float|null $operatorB
      * @return int|float
      * @throws InvalidArgumentException
      */
-    public function operation(Operation $operation, int|float $operatorA, int|float|null $operatorB): int|float;
+    public function operation(Operation|string $operation, int|float $operatorA, int|float|null $operatorB): int|float;
 
     /**
      * Realiza una operación de suma
