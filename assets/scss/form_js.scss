@@ -1,0 +1,20 @@
+@import 'form.scss';
+#result {
+    display: none;
+}
+
+#loader {
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    background-image: url(../images/ajax-loader.gif);
+    background-position: center;
+    background-repeat: no-repeat;
+    bottom: 0;
+    display: none;
+    flex: 1;
+    left: 0;
+    justify-content: center;
+    position: fixed;
+    right: 0;
+    top: 0;
+}

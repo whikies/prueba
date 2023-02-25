@@ -43,7 +43,7 @@ class OperationCommand extends Command
 
         try {
             $result = $this->operationService->operation(
-                Operation::fromName($input->getArgument('operation')),
+                $input->getArgument('operation'),
                 $this->validateNumber($input->getArgument('operatorA')),
                 $this->validateNumber($input->getArgument('operatorB'))
             );

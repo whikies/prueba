@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ 'title_operation_form'|trans }}{% endblock %}
+
+{% block body %}
+<div class="main">
+{{ form_start(form, {'attr': {'novalidate': 'novalidate'}}) }}
+    {{ form_widget(form) }}
+{{ form_end(form) }}
+</div>
+
+{% if result is not empty %}
+<div class="main result">
+    <span>{{ 'title.label_result'|trans }}</span>
+    <span>{{ result }}</span>
+</div>
+{% endif %}
+{% endblock %}
+
+
+{% block stylesheets %}
+    {{ parent() }}
+    {{ encore_entry_link_tags('form') }}
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    {{ encore_entry_script_tags('form') }}
+{% endblock %}

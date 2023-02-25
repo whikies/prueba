@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ 'title_operation_form_ja'|trans }}{% endblock %}
+
+{% block body %}
+<div class="main">
+{{ form_start(form, {attr: {id: 'form-' ~ form.vars.id }}) }}
+    {{ form_widget(form) }}
+{{ form_end(form) }}
+</div>
+
+<div class="main result" id="result">
+    <span>{{ 'title.label_result'|trans }}</span>
+    <span></span>
+</div>
+
+<div id="loader"></div>
+{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    {{ encore_entry_link_tags('form_js') }}
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script type="text/javascript">
+    var APP_REACT_VARS = window.APP_REACT_VARS || {};
+    window.APP_REACT_VARS = {
+        ...APP_REACT_VARS,
+        formId: "{{ 'form-' ~ form.vars.id }}"
+    };
+    </script>
+    {{ encore_entry_script_tags('form_js') }}
+{% endblock %}

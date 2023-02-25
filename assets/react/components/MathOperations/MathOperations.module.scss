@@ -7,6 +7,7 @@
     margin-top: 2rem;
     padding: 2rem;
 }
+
 .result {
     span {
         display: block;
@@ -17,5 +18,7 @@
     }
     span:last-child {
         font-size: 22px;
+        overflow-x: auto;
+        white-space: nowrap;
     }
 }

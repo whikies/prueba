@@ -3,9 +3,10 @@
 namespace App\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
-use App\Service\Operation;
+use App\Form\OperationType;
 use App\Service\OperationServiceInterface;
 use Exception;
 use InvalidArgumentException;
@@ -18,6 +19,33 @@ class OperationsController extends AbstractController
         return $this->render('operations/index.html.twig');
     }
 
+    #[Route('/form', name: 'app_form')]
+    public function form(Request $request, OperationServiceInterface $operationService): Response
+    {
+        $result = null;
+        $form = $this->createForm(OperationType::class);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $result = $operationService->operation($form->get('operation')->getData(), $form->get('operatorA')->getData(), $form->get('operatorB')->getData());
+        }
+
+        return $this->render('operations/form.html.twig', [
+            'form' => $form,
+            'result' => $result
+        ]);
+    }
+
+    #[Route('/form-js', name: 'app_form_js')]
+    public function formJs(): Response
+    {
+        $form = $this->createForm(OperationType::class);
+
+        return $this->render('operations/form_js.html.twig', [
+            'form' => $form
+        ]);
+    }
+
     #[Route('/{operation}/{operatorA}/{operatorB}', name: 'app_operantion', requirements: ['operatorA' => '[0-9]+(\.[0-9]+)?', 'operatorB' => '[0-9]+(\.[0-9]+)?'])]
     public function operantion(OperationServiceInterface $operationService, string $operation, int|float $operatorA, null|int|float $operatorB = null): Response
     {
@@ -25,7 +53,7 @@ class OperationsController extends AbstractController
         $data = [];
 
         try {
-            $data['result'] = $operationService->operation(Operation::fromName($operation), $operatorA, $operatorB);
+            $data['result'] = $operationService->operation($operation, $operatorA, $operatorB);
         } catch (InvalidArgumentException $e) {
             $code = Response::HTTP_BAD_REQUEST;
             $data = [

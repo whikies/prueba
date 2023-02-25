@@ -11,14 +11,18 @@ class OperationService implements OperationServiceInterface
 {
     /**
      * Realiza una operación según el parámetro $operation
-     * @param Operation $operation
+     * @param Operation|string $operation
      * @param int|float $operatorA
      * @param int|float|null $operatorB
      * @return int|float
      * @throws InvalidArgumentException
      */
-    public function operation(Operation $operation, int|float $operatorA, int|float|null $operatorB): int|float
+    public function operation(Operation|string $operation, int|float $operatorA, int|float|null $operatorB): int|float
     {
+        if (is_string($operation)) {
+            $operation = Operation::fromName($operation);
+        }
+
         $this->validateParams($operation, $operatorA, $operatorB);
 
         return match($operation) {

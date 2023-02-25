@@ -30,7 +30,9 @@
 - Ejecutar: docker-compose up -d
 - Ejecutar: docker exec -t -i test_php bash
 - Ejecutar: composer install && yarn install && yarn build;
-- Acceder a: http://localhost:8000/
+- Para ver la vista con react acceder a: http://localhost:8000/
+- Para ver la vista con el formulario de symfony acceder a: http://localhost:8000/form
+- Para ver la vista con el formulario de symfony ejecutado con javascript acceder a: http://localhost:8000/form-js
 
 ## Comando
 El comando realiza las mismas acciones que el controlador

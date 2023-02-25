@@ -1,2 +1,28 @@
 
 title_operation: Operaciones aritméticas
+title_operation_form: Operaciones aritméticas - Formulario de symfony
+title_operation_form_ja: Operaciones aritméticas - Formulario de symfony con javascript
+
+
+form.label_operation: Operación
+form.label_operator_a: Operador A
+form.label_operator_b: Operador B
+
+
+form.label_placeholder_choice: Selecciona una operación
+
+
+form.label_choice_add: Sumar
+form.label_choice_subtract: Restar
+form.label_choice_multiply: Multiplucar
+form.label_choice_division: Dividir
+form.label_choice_percentage: Porcentaje
+form.label_choice_squareRoot: Raíz cuadrada
+form.label_choice_cubeRoot: Raíz cúbica
+form.label_choice_exponencial: Exponencial
+
+
+btn.label_calc: Calcular
+
+
+title.label_result: 'Resultado:'

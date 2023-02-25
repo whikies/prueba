@@ -22,6 +22,8 @@ Encore
      */
     .addEntry('app', './assets/scss/app.scss')
     .addEntry('operation', './assets/react/operation.tsx')
+    .addEntry('form', './assets/scss/form.scss')
+    .addEntry('form_js', './assets/ts/form_js.ts')
 
     // enables the Symfony UX Stimulus bridge (used in assets/bootstrap.js)
     // .enableStimulusBridge('./assets/controllers.json')
