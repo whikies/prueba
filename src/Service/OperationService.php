@@ -50,7 +50,7 @@ class OperationService implements OperationServiceInterface
     }
 
     /**
-     * Realiza una operación de suma
+     * Realiza una operación de resta
      * @param int|float $operatorA
      * @param int|float $operatorB
      * @return int|float
@@ -61,7 +61,7 @@ class OperationService implements OperationServiceInterface
     }
 
     /**
-     * Realiza una operación de suma
+     * Realiza una operación de multiplicación
      * @param int|float $operatorA
      * @param int|float $operatorB
      * @return int|float
@@ -72,7 +72,7 @@ class OperationService implements OperationServiceInterface
     }
 
     /**
-     * Realiza una operación de suma
+     * Realiza una operación de división
      * @param int|float $operatorA
      * @param int|float $operatorB
      * @return int|float
@@ -83,7 +83,7 @@ class OperationService implements OperationServiceInterface
     }
 
     /**
-     * Realiza una operación de suma
+     * Realiza una operación de porcentaje
      * @param int|float $operatorA
      * @param int|float $operatorB
      * @return int|float
@@ -94,7 +94,7 @@ class OperationService implements OperationServiceInterface
     }
 
     /**
-     * Realiza una operación de suma
+     * Realiza una operación de raíz cuadrada
      * @param int|float $operatorA
      * @return int|float
      */
@@ -104,7 +104,7 @@ class OperationService implements OperationServiceInterface
     }
 
     /**
-     * Realiza una operación de suma
+     * Realiza una operación de raíz cúbica
      * @param int|float $operatorA
      * @return int|float
      */
@@ -114,7 +114,7 @@ class OperationService implements OperationServiceInterface
     }
 
     /**
-     * Realiza una operación de suma
+     * Realiza una operación de exponencial
      * @param int|float $operatorA
      * @param int|float $operatorB
      * @return int|float

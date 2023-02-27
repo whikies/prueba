@@ -25,7 +25,7 @@ interface OperationServiceInterface
     public function add(int|float $operatorA, int|float $operatorB): int|float;
 
     /**
-     * Realiza una operación de suma
+     * Realiza una operación de resta
      * @param int|float $operatorA
      * @param int|float $operatorB
      * @return int|float
@@ -33,7 +33,7 @@ interface OperationServiceInterface
     public function subtract(int|float $operatorA, int|float $operatorB): int|float;
 
     /**
-     * Realiza una operación de suma
+     * Realiza una operación de multiplicación
      * @param int|float $operatorA
      * @param int|float $operatorB
      * @return int|float
@@ -41,7 +41,7 @@ interface OperationServiceInterface
     public function multiply(int|float $operatorA, int|float $operatorB): int|float;
 
     /**
-     * Realiza una operación de suma
+     * Realiza una operación de división
      * @param int|float $operatorA
      * @param int|float $operatorB
      * @return int|float
@@ -49,7 +49,7 @@ interface OperationServiceInterface
     public function division(int|float $operatorA, int|float $operatorB): int|float;
 
     /**
-     * Realiza una operación de suma
+     * Realiza una operación de porcentaje
      * @param int|float $operatorA
      * @param int|float $operatorB
      * @return int|float
@@ -57,21 +57,21 @@ interface OperationServiceInterface
     public function percentage(int|float $operatorA, int|float $operatorB): int|float;
 
     /**
-     * Realiza una operación de suma
+     * Realiza una operación de raíz cuadrada
      * @param int|float $operatorA
      * @return int|float
      */
     public function squareRoot(int|float $operatorA): int|float;
 
     /**
-     * Realiza una operación de suma
+     * Realiza una operación de raíz cúbica
      * @param int|float $operatorA
      * @return int|float
      */
     public function cubeRoot(int|float $operatorA): int|float;
 
     /**
-     * Realiza una operación de suma
+     * Realiza una operación de exponencial
      * @param int|float $operatorA
      * @param int|float $operatorB
      * @return int|float
